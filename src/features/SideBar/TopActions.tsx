@@ -1,6 +1,6 @@
 import { ActionIcon } from '@lobehub/ui';
-import { Bot, MessageSquare } from 'lucide-react';
-import { usePathname, useRouter } from 'next/navigation';
+import { MessageSquare } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -15,7 +15,7 @@ export interface TopActionProps {
 
 const TopActions = memo<TopActionProps>(({ tab, setTab }) => {
   const pathname = usePathname();
-  const router = useRouter();
+  // const router = useRouter();
   const { t } = useTranslation('common');
   const switchBackToChat = useSessionStore((s) => s.switchBackToChat);
   return (
@@ -33,7 +33,7 @@ const TopActions = memo<TopActionProps>(({ tab, setTab }) => {
         size="large"
         title={t('tab.chat')}
       />
-      <ActionIcon
+      {/* <ActionIcon
         active={tab === SidebarTabKey.Market}
         icon={Bot}
         onClick={() => {
@@ -44,7 +44,7 @@ const TopActions = memo<TopActionProps>(({ tab, setTab }) => {
         placement={'right'}
         size="large"
         title={t('tab.market')}
-      />
+      /> */}
     </>
   );
 });

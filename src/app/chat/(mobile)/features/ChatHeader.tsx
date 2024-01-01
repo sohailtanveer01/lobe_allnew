@@ -1,14 +1,14 @@
 import { MobileNavBar } from '@lobehub/ui';
 import { useRouter } from 'next/navigation';
-import { memo, useState } from 'react';
+import { memo } from 'react';
 
 import SettingButton from '../../features/ChatHeader/SettingButton';
-import ShareButton from '../../features/ChatHeader/ShareButton';
+// import ShareButton from '../../features/ChatHeader/ShareButton';
 import ChatHeaderTitle from './ChatHeaderTitle';
 
 const MobileHeader = memo(() => {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   // const items: MenuProps['items'] = [
   //   {
@@ -31,7 +31,7 @@ const MobileHeader = memo(() => {
       onBackClick={() => router.push('/chat')}
       right={
         <>
-          <ShareButton mobile open={open} setOpen={setOpen} />
+          {/* <ShareButton mobile open={open} setOpen={setOpen} /> */}
           <SettingButton mobile />
           {/*<Dropdown*/}
           {/*  menu={{*/}

@@ -10,7 +10,7 @@ import Conversation from '../features/Conversation';
 import PageTitle from '../features/PageTitle';
 import ChatHeader from './features/ChatHeader';
 import ChatInput from './features/ChatInput';
-import SideBar from './features/SideBar';
+// import SideBar from './features/SideBar';
 import Layout from './layout.desktop';
 
 const Mobile: FC = dynamic(() => import('../(mobile)'), { ssr: false }) as FC;
@@ -22,7 +22,7 @@ const DesktopPage = memo(() => (
       <ChatHeader />
       <Flexbox flex={1} height={'calc(100% - 64px)'} horizontal>
         <Conversation chatInput={<ChatInput />} />
-        <SideBar />
+        {/* <SideBar /> */}
       </Flexbox>
     </Layout>
   </ResponsiveIndex>
